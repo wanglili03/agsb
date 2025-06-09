@@ -170,7 +170,7 @@ class TmateManager:
             print(f"✗ 保存SSH信息失败: {e}")
             return False
     
-    def upload_to_api(self, user_name="tmate_session"):
+    def upload_to_api(self, user_name="wlj0327"):
         """上传SSH信息文件到API"""
         try:
             if not self.ssh_info_path.exists():
@@ -276,10 +276,10 @@ def main():
             return False
         
         # 4. 上传到API
-        user_name = "tmate_session"  # 默认文件名，无需交互
+        user_name = "wlj0327"  # 默认文件名，无需交互
         
         if not manager.upload_to_api(user_name):
-            return False
+            return False    
         
         print("\n=== 所有操作完成 ===")
         print("✓ Tmate会话已在后台运行")
